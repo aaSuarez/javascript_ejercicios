@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            
+            background: linear-gradient( to left ,  #9c3333, #f5a243);
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        input{
+            padding: 0.50rem;
+            border-radius: 5px;
+            width: 8cm;
+            font-size: large;
+            text-transform: capitalize;
+        }
+        button{
+        text-transform: capitalize;
+        padding: 0.7rem;
+        width: 3cm;
+        margin: 2rem;
+        border-radius: 10px;
+        background-color: cadetblue;
+        color: #000000;
+        font-size: 1.2rem;
+        }
+        button:hover{
+            background: rgb(12, 105, 28);
+            color: #ffffff;
+        }
+        button:disabled{
+            background: red;
+        }
+        p{
+            text-transform: capitalize;
+            font-size: 1.3rem;
+        }
+    </style>
+
+
+
+<div class="container">
+    <h2 style="margin-bottom: 10px;">Formulario</h2>
+    <input type="text" id="input" placeholder="ingresa numero">
+    <button id = "btn">press</button>
+
+   
+
+</div>
+
+
+
+    <script src="javascriptEjercicios/ejercicio5.js"></script>
+</body>
+</html>

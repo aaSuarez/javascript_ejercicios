@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: rgb(58, 133, 151);
+    }
+    span{
+        color: rgb(61, 62, 62);
+    }
+    
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.1rem;
+    }
+    p{
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+
+
+</style>
+
+<body>
+    <div class="container">
+
+<h1> Hola mi nombre es : <span id="nombre"></span> <span id="apellido"></span> </h1>
+<p id="edad"></p>
+<p> MIS AMIGOS SON : <span id="amigos"></span></p>
+<p > Estudie en EducacionIT las materias de :  <span id="educacionit"></span></p>
+<p>actualmente estudio en la UTN: <span id="utn"></span></p>
+
+    </div>
+
+
+
+    <script>
+        let pedido = {
+            "id": 1,
+            "nombre": "Alejandro",
+            "apellido": "Suarez",
+            "edad":22,
+            "fechaNacimiento":"15/09/97",
+            "amigos": [{
+                    "nombre": "angel",
+                    "Apellido": "Suarez"
+                },
+                {
+                    "nombre": "jose",
+                    "Apellido": "Diaz"
+                },
+                {
+                    "nombre": "Samuel",
+                    "apellido":" lala"
+                }
+            ],
+            "conocimientos": {
+                
+                "EducacionIT": [{
+                        "nombre": "maquetado web"
+                    },
+                    {
+                        "nombre": "React"
+                    },
+                    {
+                        "nombre": "javascript avanzado"
+                    }],
+                
+                "utn": [{
+                        "Nombre": "HTML"
+                    },
+                    {
+                        "Nombre": "Css"
+                    },
+                    {
+                        "Nombre": "Boostrapt"
+                    }
+                ]
+            }
+
+
+        }
+        document.querySelector('#edad').innerText=  `Tengo ${pedido.edad} años Naci el ${pedido.fechaNacimiento}` 
+        document.getElementById('nombre').textContent = pedido.nombre
+        document.getElementById('apellido').textContent=pedido.apellido
+        
+
+        
+
+       for(var i=0 ; i < pedido.amigos.length ; i++){
+    
+   
+
+    var amigos = document.getElementById('amigos')
+
+       var span = document.createElement('span')
+       span.innerText = pedido.amigos[i].nombre + " "
+       amigos.appendChild(span)
+        
+       }
+
+       for(var i=0; i< pedido.conocimientos.EducacionIT.length; i++ ){
+        
+        var  educa = document.getElementById('educacionit')
+       
+        var conocimientos = document.createElement('span')
+        conocimientos.innerText = pedido.conocimientos.EducacionIT[i].nombre + " "
+   
+        educa.appendChild(conocimientos)
+          
+          }
+
+         for(i=0; i< pedido.conocimientos.utn.length; i++){
+             
+           let utn = document.getElementById('utn')
+
+           let utnSpan = document.createElement('span')
+           utnSpan.innerText=pedido.conocimientos.utn[i].Nombre + " "
+           utn.appendChild(utnSpan)
+
+         }
+       
+
+    </script>
+</body>
+
+</html>

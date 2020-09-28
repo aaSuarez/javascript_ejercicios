@@ -1,0 +1,26 @@
+{
+    "id":1,
+    "nombre":"Alejandro",
+    "apellido":"Suarez",
+    "amigos":[
+        { "nombre":"angel","Apellido":"Suarez"},
+        { "nombre":"jose","Apellido":"Diaz" },
+        { "nombre":"Samuel"}
+    ],
+    "conocimientos":[
+        {
+            "EducacionIT":[
+                {"nombre":"maquetado web"},
+                {"nombre":"React"},
+                {"nombre":"javascript avanzado"}
+            ],
+            "UTN":[
+                {"Nombre":"HTML"},
+                {"Nombre":"Css"},
+                {"Nombre":"Boostrapt"}
+            ]
+        }
+    ]
+    
+    
+}
